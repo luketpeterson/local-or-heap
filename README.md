@@ -1,11 +1,11 @@
 
 # local-or-heap
 
-This crate provides a type with a pre-specified size, regardless of the size of the T type it contains, using heap allocation if necessary.
+This crate provides a type with a pre-specified size, regardless of the size of the `T` type it contains, using heap allocation if necessary.
 
 The purpose of this crate is allow the size of a generic to argument to dictate where it is stored.  This is useful when you want to pack the layout of structures, e.g. for optimizing memory access, but the structure contains a generic type parameter with a size that is unknown to you.
 
-If `size_of::<T>() <= size_of::<SizeT>` performance should be as close to using the raw type as possible.  If `size_of::<T>() > size_of::<SizeT>`, performance should be as close to a box as possible.
+If `size_of::<T>() <= size_of::<SizeT>()` performance should be as close to using the raw type as possible.  If `size_of::<T>() > size_of::<SizeT>()`, performance should be as close to a box as possible.
 
 This crate serves a similar function to [smallbox](https://crates.io/crates/smallbox) but it has slightly lower runtime overhead (memory and instructions) in exchange for not being able to handle dynamically sized types.
 
