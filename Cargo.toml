@@ -1,0 +1,13 @@
+[package]
+name = "local-or-heap"
+version = "0.1.0"
+edition = "2021"
+authors = ["Luke Peterson <luke@infoplatter.com>"]
+license = "MIT OR Apache-2.0"
+description = "provides a type with a pre-specified size, regardless of the size of the T type it contains, using heap allocation if necessary"
+repository = "https://github.com/luketpeterson/local-or-heap/"
+readme = "README.md"
+keywords = ["smallbox", "fixed size"]
+categories = ["no-std", "algorithms", "data-structures", "memory-management", "rust-patterns"]
+
+[dependencies]
